@@ -1,20 +1,20 @@
 {
   "name": "mityadv_project",
-  "version":"0.0.2",
+  "version": "0.0.2",
   "description": "Автоматизация Gulp (+Sass, +PUG)",
   "main": "index.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/MityaDV/automation-gulp-v.2"
   },
   "keywords": [],
   "autor": "Dmitry Kovalkov <mityadv@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/MityaDV/automation-gulp-v.2/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/MityaDV/automation-gulp-v.2#readme",
   "devDependencies": {
     "gulp": "4.0.x",
     "stylelint": "^13.7.2",

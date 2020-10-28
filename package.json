@@ -16,15 +16,25 @@
   },
   "homepage": "https://github.com/MityaDV/automation-gulp-v.2#readme",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "eslint": "^7.12.1",
+    "eslint-config-htmlacademy": "^0.6.0",
     "gulp": "4.0.x",
     "stylelint": "^13.7.2",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "@htmlacademy/editorconfig-cli": "^1.0.0"
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "browserslist": [
     "last 2 versions",
     "not dead"
   ],
+  "dependencies": {
+    "fetch-polyfill": "^0.8.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-inline-css": "^4.0.0",
+    "natives": "^1.1.6",
+    "node-sass": "^4.14.1",
+    "quill-image-resize-module": "^3.0.0"
+  },
   "eslintIgnore": [
     "libs/"
   ],

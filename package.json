@@ -19,12 +19,12 @@
     "not dead"
   ],
   "eslintIgnore": [
-    // "libs/"
+    "libs/"
   ],
   "editorconfig-cli": [
-    // "src/js/**/*.js",
-    // "src/sass/*.{sass,scss}",
-    // "src/sass/blocks/**/*.{sass,scss}"
+    "src/js/**/*.js",
+    "src/sass/*.{sass,scss}",
+    "src/sass/blocks/**/*.{sass,scss}"
   ],
   "scripts": {
     "test": ""

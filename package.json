@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Автоматизация Gulp +Sass +Pug",
   "main": "index.js",
-  "private":true,
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MityaDV/automation-gulp-v.2.git"
@@ -19,14 +19,21 @@
     "not dead"
   ],
   "eslintIgnore": [
-    // "libs/"
+    "libs/"
   ],
   "editorconfig-cli": [
-    // "src/js/**/*.js",
-    // "src/sass/*.{sass,scss}",
-    // "src/sass/blocks/**/*.{sass,scss}"
+    "src/js/**/*.js",
+    "src/sass/*.{sass,scss}",
+    "src/sass/blocks/**/*.{sass,scss}"
   ],
-  "scripts": {
-    "test": ""
-  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-html-bem-validator": "^1.0.5",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-pug-linter": "^1.4.0",
+    "gulp-w3c-html-validator": "^2.0.1"
+  }
 }

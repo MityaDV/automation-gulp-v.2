@@ -6,7 +6,7 @@ const pugLinter = require(`gulp-pug-linter`);
 const htmlValidator = require('gulp-w3c-html-validator')
 const bemValidator = require('gulp-html-bem-validator')
 
-module.exports = function pugToHtml() {
+module.exports = function pug2Html() {
   return gulp
     .src(config.pug.pages)
     .pipe(plumber())

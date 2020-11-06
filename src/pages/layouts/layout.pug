@@ -1,0 +1,28 @@
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title
+      block title
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="description", content="Lorem ipsum dolor sit amet, consectetuer adipiscing elit")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+    block meta
+
+    link(href="fonts/" as="font" rel="preload" crossorigin="anonymous")
+    link(href="fonts/" as="font" rel="preload" crossorigin="anonymous")
+    link(rel="stylesheet", href="css/")
+  body
+    block header
+    block main
+    block footer
+    block modal
+
+    block scripts
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.js")
+

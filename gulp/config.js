@@ -19,4 +19,12 @@ module.exports = {
     dist: `build/css`,
     min: `style.min.css`
   },
+  js: {
+    src: `src/js/main.js`,
+    srcLibs: `src/libs/**/*.js`,
+    watch: `src/js/**/*.js`,
+    mode: `iife`,
+    dist: `build/js/`,
+    distLibs: `build/js/`
+  },
 }

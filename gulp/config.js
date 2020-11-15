@@ -1,8 +1,3 @@
-// const path = require('path'); // Получаем доступ к модулю node.js для работы с путями
-
-// const root = path.join(__dirname, `../`); // путь в корень сборки
-// const src = path.join(root, `src`); // путь в папку src
-
 module.exports = {
   dist: `build`,
   src: `src`,

@@ -1,0 +1,10 @@
+@import "../../general/mixins";
+
+header {
+  width: 220px;
+  background-color: red;
+
+  @include media-tablet {
+    width: 500px;
+  }
+}

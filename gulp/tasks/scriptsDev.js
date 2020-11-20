@@ -5,12 +5,13 @@ const rollup = require(`gulp-better-rollup`);
 const {babel} = require(`@rollup/plugin-babel`);
 const {nodeResolve} = require(`@rollup/plugin-node-resolve`);
 const commonjs = require(`@rollup/plugin-commonjs`);
-const uglify = require(`gulp-uglify`);
+const sourcemaps = require(`gulp-sourcemaps`);
 
-module.exports = function scripts() {
+module.exports = function scriptsDev() {
   return gulp
     .src(config.js.src)
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(
       rollup(
         {
@@ -19,7 +20,7 @@ module.exports = function scripts() {
         config.js.mode
       )
     )
-    .pipe(uglify())
+    .pipe(sourcemaps.write())
     .pipe(plumber())
     .pipe(gulp.dest(config.js.dist));
 }

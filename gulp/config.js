@@ -26,5 +26,5 @@ module.exports = {
     mode: `iife`,
     dist: `build/js/`,
     distLibs: `build/js/`
-  },
+  }
 }

@@ -16,7 +16,6 @@ module.exports = function styles() {
     .pipe(sass())
     .pipe(postcss([autoprefixer(), objectFit()]))
     .pipe(gulp.dest(config.css.dist))
-    // .pipe(minify())
     .pipe(cleanCSS({
       debug: true,
       compatibility: '*'

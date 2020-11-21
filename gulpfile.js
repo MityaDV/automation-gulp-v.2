@@ -5,9 +5,13 @@ const stylesDev = require(`./gulp/tasks/stylesDev`); // добавить выз�
 const scripts = require(`./gulp/tasks/scripts`);
 const scriptsDev = require(`./gulp/tasks/scriptsDev`); // добавить вызов этого таска в series
 const scriptsLibs = require(`./gulp/tasks/scriptsLibs`);
+const clean = require(`./gulp/tasks/clean`)
+const sprite = require(`./gulp/tasks/sprite`)
 
 module.exports.build = gulp.series(
+  clean,
   styles,
+  sprite,
   scripts,
   scriptsLibs,
   pugToHtml,

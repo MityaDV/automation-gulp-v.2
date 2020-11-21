@@ -26,5 +26,10 @@ module.exports = {
     mode: `iife`,
     dist: `build/js/`,
     distLibs: `build/js/`
+  },
+  sprite: {
+    src: `src/img/icons-sprite/*.svg`,
+    dist: `build/img/sprite`,
+    name: `sprite.svg`
   }
 }

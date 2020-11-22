@@ -2,7 +2,6 @@ module.exports = {
   dist: `build`,
   src: `src`,
   fonts: `src/fonts/**/*.{woff,woff2}`,
-  video: `src/video**/*.{mp4,webm}`,
   html: `src/*.html`,
   libs: `src/libs/**/*.{js,css}`,
   pug: {
@@ -39,8 +38,16 @@ module.exports = {
     srcRasterImg: `src/img/**/*.{png,jpg}`,
     dist: `build/img`
   },
+  video: {
+    src: `src/video/**/*.{mp4,webm}`,
+    dist: `build/video`
+  },
   json: {
     src: `src/json/*.json`,
     dist: `build/json`
-  }
+  },
+  data: {
+    src: `src/json/data.json`,
+    dist: `build/json`
+  },
 }

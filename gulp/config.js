@@ -2,8 +2,6 @@ module.exports = {
   dist: `build`,
   src: `src`,
   fonts: `src/fonts/**/*.{woff,woff2}`,
-  img: `src/img/**/*.{png,jpg,svg}`,
-  imgRaster: `src/img**/*.{png,jpg}`,
   video: `src/video**/*.{mp4,webm}`,
   html: `src/*.html`,
   libs: `src/libs/**/*.{js,css}`,
@@ -31,5 +29,18 @@ module.exports = {
     src: `src/img/icons-sprite/*.svg`,
     dist: `build/img/sprite`,
     name: `sprite.svg`
+  },
+  svg: {
+    src: `src/img/icons/*.svg`,
+    dist: `build/img`
+  },
+  img: {
+    src: `src/img/**/*.{png,jpg,svg}`,
+    srcRasterImg: `src/img**/*.{png,jpg}`,
+    dist: `build/img`
+  },
+  json: {
+    src: `src/json/*.json`,
+    dist: `build/json`
   }
 }

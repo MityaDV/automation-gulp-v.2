@@ -28,6 +28,7 @@
   ],
   "scripts": {},
   "dependencies": {
+    "acorn": "^8.0.4",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
@@ -68,6 +69,8 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-w3c-html-validator": "^2.0.1",
+    "gulp-webp": "^4.0.1",
+    "imagemin-webp": "^6.0.0",
     "postcss": "^8.1.8",
     "postcss-object-fit-images": "^1.1.2",
     "rollup": "^2.33.3",

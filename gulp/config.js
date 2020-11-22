@@ -36,7 +36,7 @@ module.exports = {
   },
   img: {
     src: `src/img/**/*.{png,jpg,svg}`,
-    srcRasterImg: `src/img**/*.{png,jpg}`,
+    srcRasterImg: `src/img/**/*.{png,jpg}`,
     dist: `build/img`
   },
   json: {

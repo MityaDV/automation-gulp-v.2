@@ -9,11 +9,13 @@ const clean = require(`./gulp/tasks/clean`);
 const sprite = require(`./gulp/tasks/sprite`);
 const copy = require(`./gulp/tasks/copy`);
 const images = require(`./gulp/tasks/images`);
+const webp = require(`./gulp/tasks/imgToWebp`);
 
 module.exports.build = gulp.series(
   clean,
   copy,
   images,
+  webp,
   styles,
   sprite,
   scripts,

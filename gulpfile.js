@@ -25,4 +25,4 @@ module.exports.build = gulp.series(
   scriptsLibs,
   pug,
   json,
-  )
+)

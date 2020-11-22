@@ -2,17 +2,14 @@ module.exports = {
   dist: `build`,
   src: `src`,
   fonts: `src/fonts/**/*.{woff,woff2}`,
-  html: `src/*.html`,
   libs: `src/libs/**/*.{js,css}`,
   pug: {
     pages: `src/pages/*.pug`,
-    components: [`src/pages/**/*.pug`, `!src/pages/email/**/*.pug`],
-    inlineCss: [`!src/pages/**/*.pug`, `src/pages/email/**/*.pug`]
+    components: `src/pages/**/*.pug`
   },
   css: {
     src: `src/sass/style.scss`,
     watch: `src/sass/**/*.scss`,
-    inlineCss: `src/email-style/**/*.css`,
     dist: `build/css`,
     min: `style.min.css`
   },
@@ -49,5 +46,5 @@ module.exports = {
   data: {
     src: `src/json/data.json`,
     dist: `build/json`
-  },
+  }
 }

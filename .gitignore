@@ -6,10 +6,15 @@ Thumbs.db
 .idea
 .vscode
 *.sublime*
+*.pdf
+*.psd
+*.ai
+*.log
 
 # Вспомогательные файлы
 *.log*
 /node_modules
+npm-debug.*
 
 # Папка с собранными файлами проекта
 # build

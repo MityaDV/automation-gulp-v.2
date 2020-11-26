@@ -1,15 +1,23 @@
 const config = require(`../config`);
 const gulp = require(`gulp`);
 const plumber = require(`gulp-plumber`);
+const data = require(`gulp-data`);
+const fs = require(`fs`);
 const pug = require(`gulp-pug`);
 const pugLinter = require(`gulp-pug-linter`);
 const htmlValidator = require('gulp-w3c-html-validator')
 const bemValidator = require('gulp-html-bem-validator')
 
-module.exports = function pugToHtml() {
+
+module.exports = function pug2Html() {
   return gulp
     .src(config.pug.pages)
     .pipe(plumber())
+    .pipe(
+      data(() => {
+        return JSON.parse(fs.readFileSync(config.data.src));
+      })
+    )
     .pipe(pugLinter({reporter: `default`}))
     .pipe(pug({ pretty: true }))
     .pipe(htmlValidator())

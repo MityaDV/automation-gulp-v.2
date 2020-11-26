@@ -26,7 +26,9 @@
     "src/sass/*.{sass,scss}",
     "src/sass/blocks/**/*.{sass,scss}"
   ],
-  "scripts": {},
+  "scripts": {
+    "start": "gulp build && gulp serve"
+  },
   "dependencies": {
     "acorn": "^8.0.4",
     "normalize.css": "^8.0.1"

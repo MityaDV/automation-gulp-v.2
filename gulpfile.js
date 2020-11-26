@@ -12,6 +12,7 @@ const images = require(`./gulp/tasks/images`);
 const webp = require(`./gulp/tasks/webp`);
 const video = require(`./gulp/tasks/video`);
 const json = require(`./gulp/tasks/json`);
+const serve =require(`./gulp/tasks/serve`);
 
 module.exports.build = gulp.series(
   clean,
@@ -25,4 +26,5 @@ module.exports.build = gulp.series(
   scriptsLibs,
   pug,
   json,
+  serve
 )

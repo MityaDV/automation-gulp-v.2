@@ -321,6 +321,9 @@ img {
 a {
   text-decoration: none; }
 
+h2 {
+  color: green; }
+
 header {
   width: 220px;
   background-color: red; }

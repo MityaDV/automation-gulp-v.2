@@ -3,9 +3,12 @@ module.exports = {
   src: `src`,
   fonts: `src/fonts/**/*.{woff,woff2}`,
   libs: `src/libs/**/*.{js,css}`,
+  html: {
+    src: `src/*.html`,
+  }
   pug: {
-    pages: `src/pages/*.pug`,
-    components: `src/pages/**/*.pug`
+    src: `src/pages/*.pug`,
+    watch: `src/pages/**/*.pug`
   },
   css: {
     src: `src/sass/style.scss`,

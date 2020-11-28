@@ -26,10 +26,7 @@
     "src/sass/*.{sass,scss}",
     "src/sass/blocks/**/*.{sass,scss}"
   ],
-  "scripts": {
-    "start": "gulp build && gulp serve"
-  },
-  "dependencies": {
+    "dependencies": {
     "acorn": "^8.0.4",
     "normalize.css": "^8.0.1"
   },
@@ -79,5 +76,8 @@
     "rollup": "^2.33.3",
     "stylelint": "^13.8.0",
     "stylelint-config-htmlacademy": "^0.1.4"
+  },
+  "scripts": {
+    "start": "gulp build && gulp serve"
   }
 }

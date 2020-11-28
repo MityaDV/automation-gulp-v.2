@@ -11,7 +11,7 @@ const bemValidator = require('gulp-html-bem-validator')
 
 module.exports = function pug2Html() {
   return gulp
-    .src(config.pug.pages)
+    .src(config.pug.src)
     .pipe(plumber())
     .pipe(
       data(() => {

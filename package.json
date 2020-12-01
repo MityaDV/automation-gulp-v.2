@@ -18,35 +18,27 @@
     "last 2 versions",
     "not dead"
   ],
-  "eslintIgnore": [
-    "libs/"
-  ],
-  "editorconfig-cli": [
-    "src/js/**/*.js",
-    "src/sass/*.{sass,scss}",
-    "src/sass/blocks/**/*.{sass,scss}"
-  ],
-    "dependencies": {
+  "dependencies": {
     "acorn": "^8.0.4",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@rollup/plugin-babel": "^5.2.1",
-    "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
-    "autoprefixer": "^10.0.2",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "autoprefixer": "^10.0.4",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
-    "eslint": "^7.13.0",
+    "eslint": "^7.14.0",
     "eslint-config-htmlacademy": "^0.6.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-better-rollup": "^4.0.1",
@@ -64,20 +56,33 @@
     "gulp-pug-linter": "^1.4.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-shorthand": "^1.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-w3c-html-validator": "^2.0.1",
     "gulp-webp": "^4.0.1",
-    "postcss": "^8.1.8",
+    "postcss": "^8.1.10",
     "postcss-object-fit-images": "^1.1.2",
-    "rollup": "^2.33.3",
+    "rollup": "^1.32.1",
     "stylelint": "^13.8.0",
     "stylelint-config-htmlacademy": "^0.1.4"
   },
+  "eslintIgnore": [
+    "libs/"
+  ],
+  "editorconfig-cli": [
+    "src/js/**/*.js",
+    "src/sass/*.{sass,scss}",
+    "src/sass/common/**/*.{sass,scss}"
+  ],
   "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "eslint": "eslint src/**/*.js",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "build": "gulp build",
+    "light": "gulp buildDevLight && gulp serve",
     "start": "gulp build && gulp serve"
   }
 }

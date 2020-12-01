@@ -5,10 +5,9 @@ const myTest = () => {
     return;
   }
 
-  let onClickButton = function() {
-    alert(`JS работает!!!`);
-  }
-
+  let onClickButton = () => {
+    alert(`JS работает!!!`); // eslint-disable-line no-alert
+  };
   testButton.addEventListener(`click`, onClickButton);
 };
 

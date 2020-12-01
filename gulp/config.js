@@ -5,10 +5,10 @@ module.exports = {
   libs: `src/libs/**/*.{js,css}`,
   html: {
     src: `src/*.html`,
-  }
+  },
   pug: {
     src: `src/pages/*.pug`,
-    watch: `src/pages/**/*.pug`
+    watch: `src/pages/**/*.pug`,
   },
   css: {
     src: `src/sass/style.scss`,

@@ -5,10 +5,10 @@ const images = require(`./gulp/tasks/images`);
 const webp = require(`./gulp/tasks/webp`);
 const video = require(`./gulp/tasks/video`);
 const styles = require(`./gulp/tasks/styles`);
-const stylesDev = require(`./gulp/tasks/stylesDev`); // добавить вызов этого таска в series
+const stylesDev = require(`./gulp/tasks/stylesDev`);
 const sprite = require(`./gulp/tasks/sprite`);
 const scripts = require(`./gulp/tasks/scripts`);
-const scriptsDev = require(`./gulp/tasks/scriptsDev`); // добавить вызов этого таска в series
+const scriptsDev = require(`./gulp/tasks/scriptsDev`);
 const scriptsLibs = require(`./gulp/tasks/scriptsLibs`);
 const pug = require(`./gulp/tasks/pug`);
 const html = require(`./gulp/tasks/html`);
@@ -29,7 +29,7 @@ module.exports.build = gulp.series(
   html,
   json,
   serve
-),
+)
 
 module.exports.buildDev = gulp.series(
   clean,
@@ -42,8 +42,9 @@ module.exports.buildDev = gulp.series(
   scriptsDev,
   scriptsLibs,
   pug,
+  html,
   json
-),
+)
 
 module.exports.buildDevLight = gulp.series(
   styles,
@@ -51,4 +52,8 @@ module.exports.buildDevLight = gulp.series(
   scriptsLibs,
   pug,
   json
+)
+
+module.exports.server = gulp.series(
+  serve
 )

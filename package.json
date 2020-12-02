@@ -82,7 +82,7 @@
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build",
-    "light": "gulp buildDevLight && gulp serve",
-    "start": "gulp build && gulp serve"
+    "light": "gulp buildDevLight && gulp server",
+    "start": "gulp buildDev && gulp server"
   }
 }

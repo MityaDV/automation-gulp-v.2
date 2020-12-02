@@ -9,7 +9,7 @@ const html = require(`./html`);
 const pug = require(`./pug`);
 const scriptsDev = require(`./scriptsDev`);
 
-module.exports = function serve(done) {
+module.exports = function serve() {
   server.init({
     server: config.dist,
     notify: false,
@@ -17,14 +17,13 @@ module.exports = function serve(done) {
     cors: true,
     ui: false,
     reloadDelay: 500,
-    files: [
-      {
-        fn: function(event, file) {
-          this.reload();
-          this.done();
-        }
-      }
-    ]
+    // files: [
+    //   {
+    //     fn: function() {
+    //       this.reload();
+    //     }
+    //   }
+    // ]
   });
   gulp.watch(config.css.watch, gulp.series(stylesDev)).on(`change`, server.reload);
   gulp.watch(config.img.src, gulp.series(images)).on(`change`, server.reload);

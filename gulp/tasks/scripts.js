@@ -6,11 +6,14 @@ const {babel} = require(`@rollup/plugin-babel`);
 const {nodeResolve} = require(`@rollup/plugin-node-resolve`);
 const commonjs = require(`@rollup/plugin-commonjs`);
 const uglify = require(`gulp-uglify`);
+const sourcemaps = require(`gulp-sourcemaps`);
+const server = require(`browser-sync`).create();
 
 module.exports = function scripts() {
   return gulp
     .src(config.js.src)
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(
       rollup(
         {
@@ -21,5 +24,7 @@ module.exports = function scripts() {
     )
     .pipe(uglify())
     .pipe(plumber())
-    .pipe(gulp.dest(config.js.dist));
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest(config.js.dist))
+    .pipe(server.stream());
 }

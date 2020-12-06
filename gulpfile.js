@@ -5,55 +5,41 @@ const images = require(`./gulp/tasks/images`);
 const webp = require(`./gulp/tasks/webp`);
 const video = require(`./gulp/tasks/video`);
 const styles = require(`./gulp/tasks/styles`);
-const stylesDev = require(`./gulp/tasks/stylesDev`);
 const sprite = require(`./gulp/tasks/sprite`);
 const scripts = require(`./gulp/tasks/scripts`);
-const scriptsDev = require(`./gulp/tasks/scriptsDev`);
 const scriptsLibs = require(`./gulp/tasks/scriptsLibs`);
 const pug = require(`./gulp/tasks/pug`);
 const html = require(`./gulp/tasks/html`);
 const json = require(`./gulp/tasks/json`);
 const serve = require(`./gulp/tasks/serve`);
+const lighthouse = require(`./gulp/tasks/lighthouse`);
+const copyDependencies = require(`./gulp/tasks/copyDependencies`);
 
-module.exports.build = gulp.series(
-  clean,
+function setMode(isProduction = false) {
+  return cb => {
+    process.env.NODE_ENV = isProduction ? 'production' : 'development';
+    cb();
+  };
+}
+
+const dev = gulp.parallel(
   copy,
-  images,
-  webp,
   video,
-  styles,
-  sprite,
-  scripts,
-  scriptsLibs,
-  pug,
   html,
   json,
-  serve
-)
-
-module.exports.buildDev = gulp.series(
-  clean,
-  copy,
-  images,
-  webp,
-  video,
-  stylesDev,
-  sprite,
-  scriptsDev,
-  scriptsLibs,
   pug,
-  html,
-  json
-)
-
-module.exports.buildDevLight = gulp.series(
   styles,
   scripts,
   scriptsLibs,
-  pug,
-  json
-)
+  images,
+  webp,
+  sprite
+);
 
-module.exports.server = gulp.series(
-  serve
-)
+const build = gulp.series(clean, copyDependencies, dev);
+
+module.exports.start = gulp.series(setMode(), build, serve)
+module.exports.build = gulp.series(setMode(true), build)
+
+module.exports.lighthouse = gulp.series(lighthouse)
+module.exports.server = gulp.series(serve)

@@ -5,9 +5,8 @@ const data = require(`gulp-data`);
 const fs = require(`fs`);
 const pug = require(`gulp-pug`);
 const pugLinter = require(`gulp-pug-linter`);
-const htmlValidator = require('gulp-w3c-html-validator')
-const bemValidator = require('gulp-html-bem-validator')
-
+const htmlValidator = require('gulp-w3c-html-validator');
+const bemValidator = require('gulp-html-bem-validator');
 
 module.exports = function pug2Html() {
   return gulp

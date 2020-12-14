@@ -17,7 +17,7 @@ module.exports = function scripts() {
     .pipe(
       rollup(
         {
-          plugins: [commonjs(), nodeResolve(), babel()]
+          plugins: [commonjs(), nodeResolve(), babel({ babelHelpers: 'bundled' })]
         },
         config.js.mode
       )

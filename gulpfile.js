@@ -42,4 +42,3 @@ module.exports.start = gulp.series(setMode(), build, serve)
 module.exports.build = gulp.series(setMode(true), build)
 
 module.exports.lighthouse = gulp.series(lighthouse)
-module.exports.server = gulp.series(serve)

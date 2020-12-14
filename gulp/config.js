@@ -3,9 +3,12 @@ module.exports = {
   src: `src`,
   fonts: `src/fonts/**/*.{woff,woff2}`,
   libs: `src/libs/**/*.{js,css}`,
+  html: {
+    src: `src/*.html`,
+  },
   pug: {
-    pages: `src/pages/*.pug`,
-    components: `src/pages/**/*.pug`
+    src: `src/pages/*.pug`,
+    watch: `src/pages/**/*.pug`,
   },
   css: {
     src: `src/sass/style.scss`,
@@ -46,5 +49,23 @@ module.exports = {
   data: {
     src: `src/json/data.json`,
     dist: `build/json`
+  },
+  lighthouse: {
+    buildPath: `build`,
+    reportPath: `reports`,
+    PORT: 8080,
+    chromeLauncherPort: 9222,
+    config: {
+      extends: 'lighthouse:default'
+    },
+    flags: {
+      // available options - https://github.com/GoogleChrome/lighthouse/#cli-options
+      chromeFlags: ['--show-paint-rects'],
+      output: 'html'
+    }
+  },
+  copyDependencies: {
+    dist: `src/local_modules`,
+    srcCopyModules: `node_modules`
   }
 }

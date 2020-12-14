@@ -5,29 +5,7 @@
     "es6": true,
     "jquery": true
   },
-  "overrides": [
-    {
-      "files": [ "src/**/*.js" ],
-      "extends": [
-        "standard",
-        "htmlacademy/es6"
-      ],
-      "rules": {
-        "indent": [
-          "error",
-          4
-        ],
-        "semi": [
-          "error",
-          "never"
-        ],
-        "quotes": [
-          "error",
-          "backtick"
-        ]
-      }
-    }
-  ],
+  "extends": "htmlacademy/es6",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"

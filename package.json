@@ -71,6 +71,7 @@
     "postcss": "^8.1.10",
     "postcss-object-fit-images": "^1.1.2",
     "rollup": "^1.32.1",
+    "smart-grid": "^2.1.2",
     "stylelint": "^13.8.0",
     "stylelint-config-htmlacademy": "^0.1.4",
     "stylelint-config-standard": "^20.0.0",

@@ -1,0 +1,12 @@
+@import "../../general/mixins";
+
+@import "../../libs/smart-grid";
+
+header {
+
+  @include container;
+
+  min-height: 100px;
+  background-color: #ffffff;
+  border: #000000 1px solid;
+}

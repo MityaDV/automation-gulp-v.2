@@ -1,6 +1,6 @@
 @import "../../general/mixins";
 
-@import "../../libs/smart-grid.scss";
+@import "../../libs/smart-grid";
 
 header {
 
@@ -8,5 +8,5 @@ header {
 
   min-height: 100px;
   background-color: #ffffff;
-  border: black 1px solid;
+  border: #000000 1px solid;
 }

@@ -96,11 +96,7 @@
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "stylelint-fix": "stylelint ./src/sass/**/*.scss --fix --syntax scss",
-    "eslint-fix": "eslint ./src/js/** --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test && npm run build"
-    }
+    "eslint-fix": "eslint ./src/js/** --fix",
+    "prepare": "husky install"
   }
 }

@@ -1,6 +1,6 @@
-@import "../../general/mixins.scss";
+@import "../../general/mixins";
 
-@import "../../libs/smart-grid.scss";
+@import "../../libs/smart-grid";
 
 .test {
 
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   min-height: 100px;
-  background-color: blue;
+  background-color: #0000ff;
 }
 
 h2 {

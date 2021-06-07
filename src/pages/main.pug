@@ -1,12 +1,17 @@
 extends layouts/layout
+include components/header/header
+include components/footer/footer
 include components/main/testSectionMain
 
 block title
   | Главная страница
 
 block header
+  header
 
 block main
-
   main
     +testSectionMain
+
+block footer
+  footer

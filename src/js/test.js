@@ -1,4 +1,4 @@
-const myTest = () => {
+const test = () => {
   let bodyPage = document.querySelector(`body`);
   let testButton = bodyPage.querySelector(`.button-test-js`);
   if (!testButton) {
@@ -8,7 +8,8 @@ const myTest = () => {
   let onClickButton = () => {
     alert(`JS работает!!!`); // eslint-disable-line no-alert
   };
+
   testButton.addEventListener(`click`, onClickButton);
 };
 
-export default myTest;
+export default test;

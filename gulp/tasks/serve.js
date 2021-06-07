@@ -31,5 +31,6 @@ module.exports = function serve() {
   gulp.watch(config.video.src, gulp.series(video)).on(`change`, server.reload);
   gulp.watch(config.html.src, gulp.series(html)).on(`change`, server.reload);
   gulp.watch(config.pug.watch, gulp.series(pug)).on(`change`, server.reload);
+  gulp.watch(config.data.watch, gulp.series(pug)).on(`change`, server.reload);
   gulp.watch(config.js.watch, gulp.series(scripts)).on(`change`, server.reload);
-}
+};

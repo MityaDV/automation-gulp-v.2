@@ -1,0 +1,20 @@
+@import "../../general/mixins.scss";
+
+@import "../../libs/smart-grid.scss";
+
+.test {
+
+  @include container;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100px;
+  background-color: blue;
+}
+
+h2 {
+  flex-basis: 100%;
+  text-align: center;
+  color: #ffffff;
+}

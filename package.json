@@ -98,5 +98,10 @@
     "stylelint-fix": "stylelint ./src/sass/**/*.scss --fix --syntax scss",
     "eslint-fix": "eslint ./src/js/** --fix",
     "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
   }
 }

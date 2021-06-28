@@ -1,8 +1,8 @@
-import myTest from "./test";
+import testBtn from "./test";
 
 class App {
   static init() {
-    myTest();
+    testBtn();
   }
 }
 

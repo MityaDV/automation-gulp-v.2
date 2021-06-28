@@ -7,7 +7,6 @@ module.exports = function copy() {
       config.fonts,
       config.img.src,
       config.svg.src,
-      config.json.src
     ], {
       base: config.src
     })

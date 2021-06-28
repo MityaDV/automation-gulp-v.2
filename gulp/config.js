@@ -42,12 +42,9 @@ module.exports = {
     src: 'src/video/**/*.{mp4,webm}',
     dist: 'build/video'
   },
-  json: {
-    src: 'src/json/*.json',
-    dist: 'build/json'
-  },
   data: {
     src: 'src/json/data.json',
+    watch: 'src/json/*.json',
     dist: 'build/json'
   },
   lighthouse: {
@@ -104,4 +101,4 @@ module.exports = {
       }
     }
   }
-}
+};

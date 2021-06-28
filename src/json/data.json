@@ -1,6 +1,7 @@
 {
   "data": {
     "name": "Test Section JSON",
-    "titleButton": "CLICK ME"
+    "titleButton": "CLICK ME",
+    "titleFooter": "It's footer"
   }
 }
